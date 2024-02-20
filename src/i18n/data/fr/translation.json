@@ -1,0 +1,47 @@
+{
+  "1": {
+    "id": 1,
+    "type": "single-select",
+    "title": "Quelle est votre langue préférée ?",
+    "description": "Choisir la langue",
+    "options": ["anglais", "français", "allemand", "espagnol"],
+    "emoji": [],
+    "button": ""
+  },
+  "2": {
+    "id": 2,
+    "type": "single-select",
+    "title": "À quel sexe vous identifiez-vous?",
+    "description": "Veuillez indiquer comment vous vous identifiez",
+    "options": ["Femme", "Homme", "Autre"],
+    "emoji": ["👩", "👨", "😊"],
+    "button": ""
+  },
+  "3": {
+    "id": 3,
+    "type": "single-select",
+    "title": "Quel est votre âge?",
+    "description": "",
+    "options": ["18-29 années", "30-39 années", "40-49 années", "50+"],
+    "emoji": [],
+    "button": ""
+  },
+  "4": {
+    "id": 4,
+    "type": "multiple-select",
+    "title": "Qu'est-ce que vous détestez le plus dans un livre ?",
+    "description": "",
+    "options": ["Manque de logique", "Vitesse trop lente", "Manque d'humour", "Fin trop générique"],
+    "emoji": [],
+    "button": "Suivant"
+  },
+  "5": {
+    "id": 5,
+    "type": "multiple-select",
+    "title": "Quels sont vos thèmes préférés ?",
+    "description": "Choisissez jusqu'à 3 sujets qui vous intéressent",
+    "options": ["Loup-garou", "Action", "Obsession royale", "Romance", "Young Adult", "Bad Boy", "Milliardaire"],
+    "emoji": [],
+    "button": "Suivant"
+  }
+}
