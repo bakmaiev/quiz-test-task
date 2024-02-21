@@ -4,9 +4,7 @@
     "type": "single-select",
     "title": "¿Cuál es su lengua preferida?",
     "description": "Elegir idioma",
-    "options": ["Inglés", "Francés", "Alemán", "Español"],
-    "emoji": [],
-    "button": ""
+    "options": ["Inglés", "Francés", "Alemán", "Español"]
   },
   "2": {
     "id": 2,
@@ -14,25 +12,19 @@
     "title": "¿Con qué género se identifica?",
     "description": "Comparta con nosotros cómo se identifica",
     "options": ["Mujer", "Hombre", "Otro"],
-    "emoji": ["👩", "👨", "😊"],
-    "button": ""
+    "emoji": ["👩", "👨", "😊"]
   },
   "3": {
     "id": 3,
     "type": "single-select",
     "title": "¿Cuál es su edad?",
-    "description": "",
-    "options": ["18-29 años", "30-39 años", "40-49 años", "50+"],
-    "emoji": [],
-    "button": ""
+    "options": ["18-29 años", "30-39 años", "40-49 años", "50+"]
   },
   "4": {
     "id": 4,
     "type": "multiple-select",
     "title": "¿Qué es lo que más odia de un libro?",
-    "description": "",
     "options": ["Falta de lógica", "Velocidad lenta", "Falta de humor", "Final demasiado genérico"],
-    "emoji": [],
     "button": "Siguiente"
   },
   "5": {
@@ -41,7 +33,23 @@
     "title": "¿Cuáles son sus temas favoritos?",
     "description": "Elige hasta 3 temas que te gusten",
     "options": ["Hombre lobo", "Acción", "Obsesión real", "Romance", "Young Adult", "Chico malo", "Multimillonario"],
-    "emoji": [],
+    "emoji": ["🐺", "💃", "👑", "🥰", "💁‍♀️", "🤠", "🤑"],
     "button": "Siguiente"
+  },
+  "loader": "Buscando colecciones para ti...",
+  "email": {
+    "title": "Correo electrónico",
+    "type": "email",
+    "description": "Ingrese su correo electrónico para obtener acceso completo",
+    "placeholder": "Tu correo electrónico",
+    "policy": "Al continuar, acepto la política de privacidad y los términos de uso.",
+    "button": "Siguiente",
+    "errorMessage": "Correo electrónico inválido"
+  },
+  "thankyou": {
+    "title": "Gracias",
+    "description": "por tu apoyo y pasar la prueba",
+    "download": "Descargar mis respuestas",
+    "button": "Repetir la prueba"
   }
 }
