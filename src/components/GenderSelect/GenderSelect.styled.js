@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 export const SelectWrapper = styled.div`
+  max-width: 480px;
   display: flex;
   align-items: center;
   gap: 12px;
+  margin: 0 auto;
 `;
 
 export const SelectButton = styled.button`
@@ -17,10 +19,11 @@ export const SelectButton = styled.button`
   padding: 24px 16px;
   background-color: var(--accent-color);
   cursor: pointer;
-  transition: background-color 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 
   &:hover {
     background-color: var(--third-color);
+    transform: scale(0.99);
   }
 `;
 

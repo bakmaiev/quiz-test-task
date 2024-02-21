@@ -9,12 +9,13 @@ export const SelectWrapper = styled.div`
 
 export const SelectButton = styled.button`
   width: 100%;
+  max-width: 480px;
   height: 60px;
   border-radius: 16px;
   padding: 12px 20px;
   background-color: var(--accent-color);
   cursor: pointer;
-  transition: background-color 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition: all 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67);
   span {
     font-weight: 600;
     font-size: 17px;
@@ -22,5 +23,6 @@ export const SelectButton = styled.button`
   }
   &:hover {
     background-color: var(--third-color);
+    transform: scale(0.99);
   }
 `;

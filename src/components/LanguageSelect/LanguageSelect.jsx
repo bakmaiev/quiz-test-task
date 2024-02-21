@@ -3,16 +3,32 @@ import { SelectButton, SelectWrapper } from "./LanguageSelect.styled";
 import { useTranslation } from "react-i18next";
 import { LOCALS } from "../../i18n/constants";
 import { nanoid } from "nanoid";
+import { useEffect, useState } from "react";
 
-const LanguageSelect = ({ options }) => {
+const LanguageSelect = ({ data }) => {
   const { id } = useParams();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const navigate = useNavigate();
   const languageCodes = Object.values(LOCALS);
+  const { options, title, type } = data;
+  const [selectedLanguage, setSelectedLanguage] = useState(null);
+
+  useEffect(() => {
+    if (selectedLanguage) {
+      const newData = {
+        order: id,
+        title: title,
+        type: type,
+        answer: selectedLanguage,
+      };
+      localStorage.setItem(id, JSON.stringify(newData));
+      navigate(`/quiz/${parseInt(id) + 1}`, { replace: true });
+    }
+  }, [selectedLanguage]);
 
   const handleLanguageChange = (languageCode) => {
     i18n.changeLanguage(languageCode);
-    navigate(`/quiz/${parseInt(id) + 1}`, { replace: true });
+    setSelectedLanguage(languageCode);
   };
 
   return (

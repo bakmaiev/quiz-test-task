@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import {
   SelectBtnTitle,
   SelectButton,
@@ -11,16 +10,25 @@ import { useNavigate, useParams } from "react-router-dom";
 const GenderSelect = ({ data }) => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const options = data.options;
-  const emoji = data.emoji;
+  const { options, emoji, title, type } = data;
+  const handleButtonClick = (selectOption) => {
+    localStorage.setItem(
+      id,
+      JSON.stringify({
+        order: id,
+        title: title,
+        type: type,
+        answer: selectOption,
+      })
+    );
+    navigate(`/quiz/${parseInt(id) + 1}`, { replace: true });
+  };
 
   return (
     <SelectWrapper>
       {options.map((option, i) => (
         <SelectButton
-          onClick={() =>
-            navigate(`/quiz/${parseInt(id) + 1}`, { replace: true })
-          }
+          onClick={() => handleButtonClick(option)}
           type="button"
           key={nanoid()}
         >
