@@ -12,6 +12,7 @@ import {
   ThankyouTitle,
 } from "./Thankyou.styled";
 import Button from "../../components/Button/Button";
+import checkmark from "../../assets/checkmark.png";
 import { saveAs } from "file-saver";
 
 const Thankyou = () => {
@@ -46,7 +47,7 @@ const Thankyou = () => {
       <ThankyouTitle>{data.title}</ThankyouTitle>
       <ThankyouDescription>{data.description ?? null}</ThankyouDescription>
       <ImgWrapper>
-        <Img src="/src/assets/checkmark.png" alt="checkmark" />
+        <Img src={checkmark} alt="checkmark" />
       </ImgWrapper>
       <DownloadInfoBtn onClick={downloadData}>
         <BsDownload size={28} />
