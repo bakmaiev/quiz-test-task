@@ -6,7 +6,7 @@ import Thankyou from "./pages/ThankyouPage/Thankyou";
 
 function App() {
   return (
-    <>
+    <main>
       <Routes>
         <Route path="/" element={<Navigate to="/quiz/1" replace />} />
         <Route path="/quiz/:id" element={<Quiz />} />
@@ -15,7 +15,7 @@ function App() {
         <Route path="/thankyou" element={<Thankyou />} />
         <Route path="*" element={<Navigate to="/quiz/1" replace />} />
       </Routes>
-    </>
+    </main>
   );
 }
 

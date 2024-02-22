@@ -66,4 +66,5 @@ export const SelectBtnTitle = styled.span`
   font-size: 13px;
   color: var(--color);
   text-overflow: ellipsis;
+  text-overflow: ellipsis;
 `;

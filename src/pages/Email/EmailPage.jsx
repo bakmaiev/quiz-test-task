@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
+  EmailContainer,
   EmailDescription,
   EmailForm,
   EmailInput,
   EmailPolicy,
   EmailTitle,
+  EmailWrapper,
   ErrorText,
   InputWrapper,
 } from "./EmailPage.styled";
@@ -42,28 +44,32 @@ const EmailPage = () => {
   });
 
   return (
-    <>
-      <EmailTitle>{data.title}</EmailTitle>
-      <EmailDescription>{data.description ?? null}</EmailDescription>
-      <EmailForm onSubmit={formik.handleSubmit}>
-        <InputWrapper>
-          <EmailInput
-            name="email"
-            placeholder={data.placeholder}
-            onChange={formik.handleChange}
-            value={formik.values.email}
-            error={formik.errors.email}
+    <EmailContainer>
+      <EmailWrapper>
+        <EmailTitle>{data.title}</EmailTitle>
+        <EmailDescription>{data.description ?? null}</EmailDescription>
+        <EmailForm onSubmit={formik.handleSubmit}>
+          <InputWrapper>
+            <EmailInput
+              name="email"
+              placeholder={data.placeholder}
+              onChange={formik.handleChange}
+              value={formik.values.email}
+              error={formik.errors.email}
+            />
+            {formik.errors.email && (
+              <ErrorText>{formik.errors.email}</ErrorText>
+            )}
+          </InputWrapper>
+          <EmailPolicy>{data.policy}</EmailPolicy>
+          <Button
+            button={data.button}
+            type="submit"
+            disabled={!formik.values.email || formik.errors.email}
           />
-          {formik.errors.email && <ErrorText>{formik.errors.email}</ErrorText>}
-        </InputWrapper>
-        <EmailPolicy>{data.policy}</EmailPolicy>
-        <Button
-          button={data.button}
-          type="submit"
-          disabled={!formik.values.email || formik.errors.email}
-        />
-      </EmailForm>
-    </>
+        </EmailForm>
+      </EmailWrapper>
+    </EmailContainer>
   );
 };
 

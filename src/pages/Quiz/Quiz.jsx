@@ -19,7 +19,7 @@ const Quiz = () => {
   const isFifthPage = parseInt(id) === 5;
 
   return (
-    <>
+    <section>
       <ProgressBar />
       <QuizTitle>{data.title}</QuizTitle>
       <QuizDescription>{data.description ?? null}</QuizDescription>
@@ -28,7 +28,7 @@ const Quiz = () => {
       {isThirdPage && <AgeSelect data={data} />}
       {isFourthPage && <BookSelect data={data} />}
       {isFifthPage && <BubbleSelect data={data} />}
-    </>
+    </section>
   );
 };
 

@@ -12,6 +12,7 @@ import { FaChevronLeft } from "react-icons/fa";
 const ProgressBar = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+
   const isBackBtn = parseInt(id) < 3;
 
   return (

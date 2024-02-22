@@ -1,10 +1,23 @@
 import styled from "styled-components";
 
+export const EmailContainer = styled.section`
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const EmailWrapper = styled.div`
+  width: 100%;
+`;
+
 export const EmailTitle = styled.h2`
   font-weight: 700;
   font-size: 28px;
   text-align: center;
-  margin: 72px 0 16px;
+  margin-bottom: 16px;
 `;
 
 export const EmailDescription = styled.p`
