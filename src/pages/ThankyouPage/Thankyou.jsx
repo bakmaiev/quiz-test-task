@@ -4,9 +4,10 @@ import { BsDownload } from "react-icons/bs";
 import {
   BtnWrapper,
   DownloadInfo,
-  DownloadInfoWrapper,
+  DownloadInfoBtn,
   Img,
   ImgWrapper,
+  ThankyouContainer,
   ThankyouDescription,
   ThankyouTitle,
 } from "./Thankyou.styled";
@@ -16,32 +17,41 @@ import { saveAs } from "file-saver";
 const Thankyou = () => {
   const { t } = useTranslation("translations");
   const data = t("thankyou", { returnObjects: true });
+  const { totalCards } = data;
   const navigate = useNavigate();
 
   const downloadData = () => {
     const data = [];
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= totalCards; i++) {
       const item = localStorage.getItem(i.toString());
       if (item) {
         data.push(JSON.parse(item));
       }
     }
-    const csv = data.map((row) => Object.values(row).join(",")).join("\n");
+    const headerRow = "order,title,type,answer";
+    const csvData = [headerRow];
+    data.forEach((row) => {
+      const csvRow = Object.values(row)
+        .map((value) => value)
+        .join(",");
+      csvData.push(csvRow);
+    });
+    const csv = csvData.join("\n");
     const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
     saveAs(blob, "data.csv");
   };
 
   return (
-    <>
+    <ThankyouContainer>
       <ThankyouTitle>{data.title}</ThankyouTitle>
       <ThankyouDescription>{data.description ?? null}</ThankyouDescription>
       <ImgWrapper>
         <Img src="/src/assets/checkmark.png" alt="checkmark" />
       </ImgWrapper>
-      <DownloadInfoWrapper onClick={downloadData}>
+      <DownloadInfoBtn onClick={downloadData}>
         <BsDownload size={28} />
         <DownloadInfo>{data.download}</DownloadInfo>
-      </DownloadInfoWrapper>
+      </DownloadInfoBtn>
       <BtnWrapper>
         <Button
           button={data.button}
@@ -49,7 +59,7 @@ const Thankyou = () => {
           onClick={() => navigate("/")}
         />
       </BtnWrapper>
-    </>
+    </ThankyouContainer>
   );
 };
 
