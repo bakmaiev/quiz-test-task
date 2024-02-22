@@ -50,6 +50,7 @@
     "title": "Thank you",
     "description": "for supporting us and passing quiz",
     "download": "Download my answers",
-    "button": "Retake quiz"
+    "button": "Retake quiz",
+    "totalCards": 6
   }
 }

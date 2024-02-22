@@ -49,6 +49,7 @@
     "title": "Merci",
     "description": "pour votre soutien et avoir réussi le quiz",
     "download": "Télécharger mes réponses",
-    "button": "Repasser le quiz"
+    "button": "Repasser le quiz",
+    "totalCards": 6
   }
 }

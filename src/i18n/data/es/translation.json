@@ -50,6 +50,7 @@
     "title": "Gracias",
     "description": "por tu apoyo y pasar la prueba",
     "download": "Descargar mis respuestas",
-    "button": "Repetir la prueba"
+    "button": "Repetir la prueba",
+    "totalCards": 6
   }
 }

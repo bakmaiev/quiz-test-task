@@ -29,7 +29,6 @@ i18n
   .use(initReactI18next)
   .use(LanguageDetector)
   .init({
-    debug: true,
     resources,
     fallbackLng: LOCALS.EN,
 

@@ -50,7 +50,8 @@
     "title": "Vielen Dank",
     "description": "für Ihre Unterstützung und das Bestehen des Quiz",
     "download": "Laden Sie meine Antworten herunter",
-    "button": "Quiz wiederholen"
+    "button": "Quiz wiederholen",
+    "totalCards": 6
   }
 
 }
