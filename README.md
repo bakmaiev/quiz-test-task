@@ -5,6 +5,7 @@ The user of the application has the ability to choose a convenient language at t
 ![React Quiz Preview](/src/assets/1.jpg)
 ![React Quiz Preview](/src/assets/2.jpg)
 ![React Quiz Preview](/src/assets/3.jpg)
+![React Quiz Preview](/src/assets/4.jpg)
 
 ## New User Journey
 
@@ -16,8 +17,10 @@ The user of the application has the ability to choose a convenient language at t
 
 - **React:** A JavaScript library for building user interfaces.
 - **Vite:** A fast build tool that provides a faster development experience for modern web projects.
-- **Styled Components:** A library that utilizes tagged template literals to style your components..
+- **Styled Components:** A library that utilizes tagged template literals to style your components.
 - **i18n:** A process of designing a software application so that it can be adapted to various languages and regions without engineering changes.
+- **Formik:** A React library for managing forms, handling form state, validation, and submission with ease.
+- **Yup:** A JavaScript schema builder for value parsing and validation, commonly used with Formik to define validation rules for form inputs.
 
 ## Running Locally
 
