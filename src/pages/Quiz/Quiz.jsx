@@ -20,7 +20,6 @@ const Quiz = () => {
 
   return (
     <section>
-      <ProgressBar />
       <QuizTitle>{data.title}</QuizTitle>
       <QuizDescription>{data.description ?? null}</QuizDescription>
       {isFirstPage && <LanguageSelect data={data} />}

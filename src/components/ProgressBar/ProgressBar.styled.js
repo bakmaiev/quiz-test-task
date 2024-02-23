@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProgressBarContainer = styled.div`
+export const ProgressBarContainer = styled.header`
   margin-bottom: 45px;
 `;
 
